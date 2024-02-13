@@ -17,20 +17,31 @@
         <div class = "buttons">
             <button class="btn" id = "yesButton" onclick="nextPage()">Да</button>
             <button class="btn" id="noButton" onmouseover="moveButton()">Нет</button>
-            <script>
+             <script>
+                // Функция для перехода на следующую страницу
                 function nextPage() {
                     window.location.href = "yes.html";
                 }
-
+            
+                // Функция для перемещения кнопки
                 function moveButton() {
+                    // Вычисляем случайные координаты в пределах экрана
                     let x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
                     let y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            
+                    // Устанавливаем координаты кнопки
                     document.getElementById('noButton').style.left = `${x}px`;
                     document.getElementById('noButton').style.top = `${y}px`;
                 }
+            
+                // Обработчик события при касании экрана
+                document.addEventListener('touchstart', function(event) {
+                    // Вызываем функцию перемещения кнопки
+                    moveButton();
+                });
             </script>
         </div>
     </div>
 
-</body>Ф
+</body>
 </html>
