@@ -12,13 +12,16 @@ body {
 /* Position the "No" button absolutely within body */
 #noButton {
     position: absolute;
-    margin-left: 150px;
+    left: 10px; /* Позиционируем кнопку "No" слева */
+    bottom: 10px; /* Позиционируем кнопку "No" снизу */
     transition: 0.5s;
     /* Smooth movement */
 }
+
 .text {
     background: white;
-    width: 900px;
+    width: 90%; /* Ширина текстового блока 90% от ширины экрана */
+    max-width: 600px; /* Максимальная ширина текстового блока */
     height: 70px;
     display: flex;
     justify-content: center;
@@ -26,68 +29,49 @@ body {
     border-radius: 15px;
 }
 
-#yesButton {
-    position: absolute;
-    margin-right: 150px;
-    /* Smooth movement */
-}
-
 .header_text {
     font-family: cursive;
-    font-size: 50px;
+    font-size: 30px; /* Уменьшаем размер шрифта */
     font-weight: bold;
     color: black;
     text-align: center;
-    /*padding-top: 30px;*/
     padding-bottom: 5px;
 }
 
 .buttons {
-    width: 900px;
+    width: 90%; /* Ширина блока с кнопками 90% от ширины экрана */
+    max-width: 600px; /* Максимальная ширина блока с кнопками */
     display: flex;
-    gap: 200px;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column; /* Отображаем кнопки в столбец */
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
-    margin-left: 20px;
-    /* optional: adds some space between the buttons */
 }
 
 .btn {
-    width: 200px;
-    height: 100px;
+    width: 90%; /* Ширина кнопки 90% от ширины блока с кнопками */
+    max-width: 300px; /* Максимальная ширина кнопки */
+    height: 80px; /* Уменьшаем высоту кнопки */
     background-color: deeppink;
     color: white;
     padding: 15px 32px;
     text-align: center;
     display: inline-block;
-    font-size: 50px;
-    margin: 40px 20px;
+    font-size: 24px; /* Уменьшаем размер шрифта */
+    margin: 20px; /* Увеличиваем отступы между кнопками */
     cursor: pointer;
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
-
-}
-
-.btn:hover {
-    background-color: #FAF9F6;
 }
 
 .gif_container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 90px;
 }
 
 img {
-    width: 400px;
-    /*height: ;*/
-}
-
-#yesButton {
-    position: absolute;
-    right: 850px;
+    width: 90%; /* Ширина изображения 90% от ширины экрана */
+    max-width: 300px; /* Максимальная ширина изображения */
 }
